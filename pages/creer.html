@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title translate="no">YopTube</title>
+    <link rel="icon" href="../img/icon.png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../img/Design sans titre.png" id="menu" onclick="menuopen()" title="Menu" weight="25" height="25">
+            <img src="../img/icon.png" alt="Logo YopTube" id="icon" onclick="window.location.href='../index.html'" weight="35" height="35" title="Acceuil YopTube">
+            <img src="../img/logo.png" alt="Logo YopTube" id="logo" onclick="window.location.href='../index.html'" weight="25" height="25" title="Acceuil YopTube">
+            <input type="search" id="searchInput" placeholder="Recherche">
+            <button id="creer" onclick="window.location.href='creer.html'"><strong>+ Créer</strong></button>
+            <button id="profil" onclick="window.location.href='profil.html'" title="Profil"></button>   
+        </div>
+        <div class="menu">
+        </div>
+        <div class="content">
+            <div class="add">
+                <p><strong>Etape 1</strong> - Mettre un titre a votre vidéo :</p>
+                <input type="text" id="title" placeholder="Titre de la vidéo">
+                <p><strong>Etape 2</strong> - Mettre une description a votre vidéo :</p>
+                <input type="text" id="description" placeholder="Description de la vidéo">
+                <p><strong>Etape 3</strong> - Téléverser votre vidéo :</p>
+                <input type="file" accept="video/*" id="videoFile" placeholder="Téléverser votre vidéo">
+                <p><strong>Etape 4</strong> - Choisir une miniature :</p> 
+                <input type="file" accept="image/*" id="thumbnailFile" placeholder="Choisir une miniature">
+                <p><strong>Etape 5</strong> - Choisir une catégorie :</p> 
+                <select id="category">
+                    <option value="divertissement">Divertissement</option>
+                    <option value="musique">Musique</option>
+                    <option value="jeux">Jeux</option>
+                    <option value="éducation">Éducation</option>
+                    <option value="vlog">Vlog</option>
+                    <option value="autre">Autre</option>
+                </select>
+                <br>
+                <br>
+                <button id="submit" onclick="submitVideo()">Soumettre</button>
+                <p id="successMessage" style="display:none;">Vidéo soumise avec succès !</p>
+                <p id="errorMessage" style="display:none;">Erreur lors de la soumission de la vidéo. Veuillez réessayer.</p>
+
+            </div>
+            <div class="wrapper2">
+            </div>
+            <p id="noResult">Aucun article trouvé.</p>
+        </div>
+        <div class="footer">
+            <h4>YopTube - Page créer</h4>
+            <br>
+            <img src="../img/system-regular-140-help-center-hover-help-center-1.png" height="25" width="25" onclick="window.location.href='credit.html'" title="Aide" id="help">
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

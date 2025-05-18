@@ -1,0 +1,60 @@
+{
+  "nav": [
+    {
+      "titre": "Accueil",
+      "lien": "index.html",
+      "icon1": "img/system-regular-41-home-hover-home-2.png",
+      "icon2": "img/system-solid-41-home-hover-home-2.png"
+    },
+    {
+      "titre": "Shorts",
+      "lien": "pages/short.html",
+      "icon1": "img/system-regular-24-view-1-hover-view-1.png",
+      "icon2": "img/system-solid-24-view-1-hover-view-5.png"
+    },
+    {
+      "titre": "Abonnements",
+      "lien": "pages/abonnement.html",
+      "icon1": "img/system-regular-15-ratio-hover-ratio.png",
+      "icon2": "img/system-solid-15-ratio-hover-ratio.png"
+    },
+    {
+      "titre": "Vous",
+      "lien": "pages/vous.html",
+      "icon1": "img/system-regular-8-account-hover-account.png",
+      "icon2": "img/system-solid-8-account-hover-account-on.png"
+    }
+  ],
+
+
+  
+  "video": [
+    {
+      "pseudo": "Grodingo",
+      "titre": "Fall Guys (ft. Anyme)",
+      "img": "img/icon.png",
+      "description": "trop cool les lives",
+      "type": "Jeux",
+      "fichiervid": "../ressource/Enregistrement 2024-03-28 115219.mp4",
+      "lien": "0"
+    },
+    {
+      "pseudo": "Grodingo",
+      "titre": "Fall Guys (ft. Anyme)",
+      "img": "img/icon.png",
+      "description": "trop cool les lives",
+      "type": "Jeux",
+      "fichiervid": "../ressource/Enregistrement 2024-03-28 115219.mp4",
+      "lien": "1"
+    },
+    {
+      "pseudo": "Grodingo",
+      "titre": "Fall Guys (ft. Anyme)",
+      "img": "img/icon.png",
+      "description": "trop cool les lives",
+      "type": "Jeux",
+      "fichiervid": "../ressource/Enregistrement 2024-03-28 115219.mp4",
+      "lien": "2"
+    }
+  ]
+}
