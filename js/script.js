@@ -30,20 +30,21 @@ document.addEventListener("DOMContentLoaded", async function () {
         videoData = data.video;
 
         console.log(navData);
-        console.log(videoData);
 
         load(navData);
         loadvideo(videoData);
 
     } catch (error) {
         console.error("⚠️ Erreur lors du chargement du JSON :", error.message);
+        Erreur404();
     }
     
     if (location.pathname.includes("video.html")) {
+        console.log("Page vidéo");
         const urlParams = new URLSearchParams(window.location.search);
         const watchlink = urlParams.get('watchlink');
         console.log("Lien de la vidéo : " + watchlink);
-        
+
         if (watchlink) {
             const video = videoData.find(v => v.lien === watchlink);
             if (video) {
@@ -56,21 +57,31 @@ document.addEventListener("DOMContentLoaded", async function () {
                 document.getElementById("uploaderName").textContent = video.pseudo;
             } else {
                 console.warn("⚠️ Aucune vidéo trouvée avec ce lien.");
-                afficherErreur404();
+                Erreur404();
             }
         } else {
-            console.error("⚠️ Aucun lien de vidéo trouvé dans l'URL.");
-            document.querySelector(".contentvideo").style = "display: block; text-align: center; margin-top: 20px;";
-            document.querySelector(".contentvideo").innerHTML = 
-            `<h1>Erreur 404</h1>
-            <p>La vidéo que vous cherchez n'existe pas ou a été supprimée.</p>
-            <button onclick="window.location.href='../index.html'">Retour à l'accueil</button>`;
+           Erreur404();
         }
     }
 });
 
+function Erreur404() {
+    document.querySelector(".content").style = "display: block; text-align: center; margin-top: 20px; grid-area: content;";
+    document.querySelector(".menu").style = "display: none;";
+    document.querySelector(".container").style = "grid-template-areas:'header header''content content''footer footer';";
+    document.querySelector(".content").innerHTML = 
+    `<h1>Erreur 404</h1>
+    <p>La ressource que vous cherchez, ne charge pas, n'existe pas ou a été supprimée.</p>
+    <button onclick="window.location.href='../index.html'">Retour à l'accueil</button>
+    <button onclick="location.reload()">Rafraichir la page</button>`;
+}
+
 function loadvideo(video) {
     let videoload = document.querySelector(".wrapper"); 
+    if (!videoload) {
+        console.error("⚠️ Élément #videoPlayer introuvable !");
+        return;
+    }
     videoload.innerHTML = "";
 
     video.forEach(video => {
